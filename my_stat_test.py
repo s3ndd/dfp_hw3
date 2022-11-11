@@ -1,23 +1,37 @@
+"""
+Homework 3 Team 7:
+
+Name: Yuling Shi
+Andrew ID: yulings
+Email: yulings@andrew.cmu.edu
+
+Name: Sheldon Shi
+Andrew ID: lijuns
+Email: lijuns@andrew.cmu.edu
+"""
+# part 3, a
+import numpy as np
+import mystats as ms
 
 # File: my_stat_test.py
 
-np.random.seed(0)    # make sure everyone gets the same answers
+np.random.seed(0)  # make sure everyone gets the same answers
 
-int_list1 = [ 3, 4, 5, 4, 5, 2, 2, 1, 2, 1, 7, 8, 9, 10, 4, 0 ]
+int_list1 = [3, 4, 5, 4, 5, 2, 2, 1, 2, 1, 7, 8, 9, 10, 4, 0]
 
-int_list2 = [ np.random.randint(1000) for i in range(1000) ]
+int_list2 = [np.random.randint(1000) for i in range(1000)]
 
-float_list1 = [ 1.1, 2.3, 4.3, 6.7, 9.8, 3.3, 1.4, 1.8, 9.1, 5.6, 5.0 ]
+float_list1 = [1.1, 2.3, 4.3, 6.7, 9.8, 3.3, 1.4, 1.8, 9.1, 5.6, 5.0]
 
 float_list2 = list(np.random.rand(1000))
 
-int_tup1 = ( 3, 1, 5, 4, 9, 9, 4, 4, 7, 1, 0, 2, 3 )
+int_tup1 = (3, 1, 5, 4, 9, 9, 4, 4, 7, 1, 0, 2, 3)
 
 int_tup2 = tuple(np.random.randint(1000) for i in range(1000))
 
-int_set1 = { 5, 6, 7, 4, 5, 4, 9, 8, 0, 1, 5, 4, 4, 2 }
+int_set1 = {5, 6, 7, 4, 5, 4, 9, 8, 0, 1, 5, 4, 4, 2}
 
-int_set2 = { np.random.randint(1000) for i in range(1000) }
+int_set2 = {np.random.randint(1000) for i in range(1000)}
 
 print("mean of int_list1:", ms.mean(int_list1))
 print("stddev of int_list1:", ms.stddev(int_list1))
@@ -56,4 +70,3 @@ print("mean of int_set2:", ms.mean(int_set2))
 print("stddev of int_set2:", ms.stddev(int_set2))
 print("median of int_set2:", ms.median(int_set2))
 print("mode of int_set2:", ms.mode(int_set2))
-
