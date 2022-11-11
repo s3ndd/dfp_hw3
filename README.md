@@ -5,9 +5,9 @@
 - You will lose 10 points per hour after that time
 * * *
 ### 1. (30 points) Lists, Tuples, Sets, Dicts, and Comprehensions
-```
-expenses.txt is a small text file describing business expenses. Each line (after the header) gives the money amount, category, date, and description of an expense.
-```
+
+**expenses.txt** is a small text file describing business expenses. Each line (after the header) gives the money amount, category, date, and description of an expense.
+
 - a. Create a Python script file named **hw3.1.py**. In this script, define an empty list named **records** , then read the lines from **expenses.txt** and **append** each line (_excluding_ its terminating newline character) to the **records** list. Add this code to display the lines from **records** :
 ```python
 for line in records:
@@ -16,14 +16,14 @@ for line in records:
 
 Confirm that the output is not double-spaced; that is, confirm that each line (string) in the **records** list does not include a terminating newline.
 
-- b. Close the open **expenses.txt** file, then open **expenses.txt** again. Use _ **list** _ _comprehension_ notation to create and initialize a new list, **records2** , from the lines in the **expenses.txt** file, excluding the terminating newline characters. Confirm that you have done this correctly, by adding this code at the end of the script:
+- b. Close the open **expenses.txt** file, then open **expenses.txt** again. Use **list** _comprehension_ notation to create and initialize a new list, **records2** , from the lines in the **expenses.txt** file, excluding the terminating newline characters. Confirm that you have done this correctly, by adding this code at the end of the script:
 ```python
 print("\nrecords == records2:",
 	records == records2, '\n')
 ```
 This should display **records == records2: True**.
 
-- c. Close the open **expenses.txt** file, and open **expenses.txt** again. Learn about the **str** class's **split** function. Fields in the **expenses.txt** file are separated with colon characters, **':'** , since expense descriptions often contain commas. Use _nested_ _ **tuple** _ _conversion_ notation to create and initialize a new _tuple__of tuples_, **records3** , in which each "inner" tuple has the form **(**_amount_ **,** _category_ **,** _date_ **,** _description_**)**, and the "outer" tuple contains one "inner" tuple for each line of input. We use a tuple of tuples because tuples are _immutable_, and we want to protect the input data from accidental change.
+- c. Close the open **expenses.txt** file, and open **expenses.txt** again. Learn about the **str** class's **split** function. Fields in the **expenses.txt** file are separated with colon characters, **':'** , since expense descriptions often contain commas. Use _nested_  **tuple** _conversion_ notation to create and initialize a new _tuple_ _of tuples_, **records3** , in which each "inner" tuple has the form **(**_amount_ **,** _category_ **,** _date_ **,** _description_**)**, and the "outer" tuple contains one "inner" tuple for each line of input. We use a tuple of tuples because tuples are _immutable_, and we want to protect the input data from accidental change.
 
 Add this code to display the tuple of tuples **records3** :
 
@@ -45,7 +45,7 @@ The output from this loop should look like:
 Using _ **set** _ _comprehension_ notation with **records3** , define: **cat\_set** , the set of categories (do not include the string **'Category'** ) in the expense records; and, **date\_set** , the set of dates (again, do not include the string **'Date'** ) in the expense records. Add this code to display these two sets:
 ```python
 print('Categories:', cat_set, '\n')
-		print('Dates:     ', date_set, '\n')
+print('Dates:     ', date_set, '\n')
 ```
 
 Since **set** s are unordered, your exact output may differ, but the output should look something like:
@@ -144,7 +144,7 @@ Run the module and confirm success.
 - d. At the top of your **mystats.py** file, insert the line:
 
 ```python
-import numpy as np*
+import numpy as np
 ```
 
 so that we can use NumPy's random number generator functions. (We will do more with NumPy in part (3) below.)
@@ -238,8 +238,7 @@ Add an appropriate **import** statement at the top of **my\_stat\_test.py** so t
 - b. Modify **mystats.py** so that its testing code is only executed when **mystats.py** is the main module. Then, run **my\_stat\_test.py** as the main module, and confirm that although the functions defined in **mystats.py** are available in **my\_stat\_test.py** , the testing code in **mystats.py** is _not_ executed when **mystats.py** is imported.
 * * *
 ### 4. **(30 points) NumPy**
-- a. In lecture, we introduced NumPy and its N-dimensional array type, **ndarray**. We looked at ways to create **ndarray** objects, and at three ways for accessing rows/columns/sections of an **ndarray** : slices, Boolean indexes, and "fancy" or integer indexes.
-
-There is _much_ more to NumPy than we have time to talk about. In Python for Data Analysis, 2nd Ed., read through sections 4.2: Universal Functions, 4.3: Array-Oriented Programming, and 4.4: File Input and Output, and try out all of the examples in a Jupyter notebook.
+- a. In lecture, we introduced NumPy and its N-dimensional array type, **ndarray**. We looked at ways to create **ndarray** objects, and at three ways for accessing rows/columns/sections of an **ndarray** : slices, Boolean indexes, and "fancy" or integer indexes. 
+- There is _much_ more to NumPy than we have time to talk about. In Python for Data Analysis, 2nd Ed., read through sections 4.2: Universal Functions, 4.3: Array-Oriented Programming, and 4.4: File Input and Output, and try out all of the examples in a Jupyter notebook.
 * * *
 ***When finished, put your hw3.1.py, mystats.py and my_stat_test.py source code files and your Jupyter notebook into a zip archive named TeamN_HW3.zip file, where N is your team number, then upload your .zip archive to Canvas.***
